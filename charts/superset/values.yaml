@@ -133,40 +133,8 @@ extraVolumeMounts: []
 # WARNING: the order is not guaranteed
 # Files can be passed as helm --set-file configOverrides.my-override=my-file.py
 configOverrides:
-  # extend_timeout: |
-  #    # Extend timeout to allow long running queries.
-  #    SUPERSET_WEBSERVER_TIMEOUT = ...
-  # enable_oauth: |
-  #   from flask_appbuilder.security.manager import (AUTH_DB, AUTH_OAUTH)
-  #   AUTH_TYPE = AUTH_OAUTH
-  #   OAUTH_PROVIDERS = [
-  #       {
-  #           "name": "google",
-  #           "whitelist": [ os.getenv("OAUTH_WHITELIST_REGEX", s"") ],
-  #           "icon": "fa-google",
-  #           "token_key": "access_token",
-  #           "remote_app": {
-  #               "client_id": os.environ.get("GOOGLE_KEY"),
-  #               "client_secret": os.environ.get("GOOGLE_SECRET"),
-  #               "api_base_url": "https://www.googleapis.com/oauth2/v2/",
-  #               "client_kwargs": {"scope": "email profile"},
-  #               "request_token_url": None,
-  #               "access_token_url": "https://accounts.google.com/o/oauth2/token",
-  #               "authorize_url": "https://accounts.google.com/o/oauth2/auth",
-  #               "authorize_params": {"hd": os.getenv("OAUTH_HOME_DOMAIN", "")}
-  #           }
-  #       }
-  #   ]
-  #   # Map Authlib roles to superset roles
-  #   AUTH_ROLE_ADMIN = 'Admin'
-  #   AUTH_ROLE_PUBLIC = 'Public'
-  #   # Will allow user self registration, allowing to create Flask users from Authorized User
-  #   AUTH_USER_REGISTRATION = True
-  #   # The default user self registration role
-  #   AUTH_USER_REGISTRATION_ROLE = "Admin"
-   secret: |
-#Generate your own secret key for encryption. Use openssl rand -base64 42 to generate a good key
-     SECRET_KEY = 'm13Ltf/fLX3TZX1TyNdoSvozzKXSYrOYTelq8yJuXkJ5ISSUfZjiMizf'
+  secret: |
+    SECRET_KEY = 'm13Ltf/fLX3TZX1TyNdoSvozzKXSYrOYTelq8yJuXkJ5ISSUfZjiMizf'
 
 # -- Same as above but the values are files
 configOverridesFiles: {}
