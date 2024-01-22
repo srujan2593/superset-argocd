@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: superset
+  namespace: argocd  # The namespace where ArgoCD is installed
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/srujan2593/superset-argocd.git  # Your GitHub repository URL
+    targetRevision: HEAD
+    path: charts/superset  # Path to the Helm chart directory
+    helm:
+      valueFiles:
+        - values.yaml  # Optional: Custom values file if needed
+  destination:
+    server: https://kubernetes.default.svc  # Address of your Kubernetes cluster
+    namespace: default  # Namespace where you want to deploy Superset
+  syncPolicy:
+    automated:
+      prune: true
