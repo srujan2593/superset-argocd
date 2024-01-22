@@ -164,8 +164,8 @@ configOverrides:
   #   AUTH_USER_REGISTRATION = True
   #   # The default user self registration role
   #   AUTH_USER_REGISTRATION_ROLE = "Admin"
-  # secret: |
-  #   # Generate your own secret key for encryption. Use openssl rand -base64 42 to generate a good key
+   secret: |
+#Generate your own secret key for encryption. Use openssl rand -base64 42 to generate a good key
      SECRET_KEY = 'm13Ltf/fLX3TZX1TyNdoSvozzKXSYrOYTelq8yJuXkJ5ISSUfZjiMizf'
 
 # -- Same as above but the values are files
