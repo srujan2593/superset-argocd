@@ -142,7 +142,7 @@ configOverrides:
   #   OAUTH_PROVIDERS = [
   #       {
   #           "name": "google",
-  #           "whitelist": [ os.getenv("OAUTH_WHITELIST_REGEX", "") ],
+  #           "whitelist": [ os.getenv("OAUTH_WHITELIST_REGEX", s"") ],
   #           "icon": "fa-google",
   #           "token_key": "access_token",
   #           "remote_app": {
@@ -179,7 +179,7 @@ extraConfigMountPath: "/app/configs"
 
 image:
   repository: apachesuperset.docker.scarf.sh/apache/superset
-  tag: ""
+  tag: "3.0.3"
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
