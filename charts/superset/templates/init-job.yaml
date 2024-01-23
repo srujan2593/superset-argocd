@@ -22,7 +22,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: {{ template "superset.fullname" . }}-init-db
-  namespace: {{ .Release.Namespace }}
+  namespace: superset
   {{- if .Values.init.jobAnnotations }}
   annotations: {{- toYaml .Values.init.jobAnnotations | nindent 4 }}
   {{- end }}

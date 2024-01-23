@@ -22,7 +22,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ template "superset.fullname" . }}-extra-config
-  namespace: {{ .Release.Namespace }}
+  namespace: superset
   labels:
     app: {{ template "superset.name" . }}
     chart: {{ template "superset.chart" . }}

@@ -21,7 +21,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: {{ template "superset.fullname" . }}
-  namespace: {{ .Release.Namespace }}
+  namespace: superset
   labels:
     app: {{ template "superset.name" . }}
     chart: {{ template "superset.chart" . }}

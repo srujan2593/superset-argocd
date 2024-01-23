@@ -22,7 +22,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: "{{ template "superset.fullname" . }}-ws"
-  namespace: {{ .Release.Namespace }}
+  namespace: superset
   labels:
     app: "{{ template "superset.name" . }}-ws"
     chart: {{ template "superset.chart" . }}

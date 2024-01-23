@@ -21,7 +21,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "superset.fullname" . }}-worker
-  namespace: {{ .Release.Namespace }}
+  namespace: superset
   labels:
     app: {{ template "superset.name" . }}-worker
     chart: {{ template "superset.chart" . }}
